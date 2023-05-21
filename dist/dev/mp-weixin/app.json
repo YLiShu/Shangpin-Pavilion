@@ -5,7 +5,20 @@
     "pages/cart/cart",
     "pages/my/my"
   ],
-  "subPackages": [],
+  "subPackages": [
+    {
+      "root": "subpkg/goods_detail",
+      "pages": [
+        "goods_detail"
+      ]
+    },
+    {
+      "root": "subpkg/goods_list",
+      "pages": [
+        "goods_list"
+      ]
+    }
+  ],
   "window": {
     "navigationBarTextStyle": "white",
     "navigationBarTitleText": "尚品阁",

@@ -68,6 +68,7 @@
     "@dcloudio/uni-stacktracey": "^2.0.2-3071120230427001",
     "@dcloudio/uni-stat": "^2.0.2-3071120230427001",
     "@dcloudio/uni-ui": "^1.4.27",
+    "@escook/request-miniprogram": "^0.2.1",
     "@vue/shared": "^3.0.0",
     "core-js": "^3.8.3",
     "flyio": "^0.6.2",
@@ -105,5 +106,18 @@
   ],
   "uni-app": {
     "scripts": {}
-  }
+  },
+  "description": "## Project setup ``` npm install ```",
+  "main": "babel.config.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/YLiShu/uni-shop.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/YLiShu/uni-shop/issues"
+  },
+  "homepage": "https://github.com/YLiShu/uni-shop#readme"
 }
