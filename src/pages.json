@@ -5,32 +5,26 @@
 			"style": {
 				"enablePullDownRefresh": false
 			}
+		},
+		{
+			"path": "pages/cate/cate",
+			"style": {
+				"enablePullDownRefresh": false
+			}
+		},
+		{
+			"path": "pages/cart/cart",
+			"style": {
+				"enablePullDownRefresh": false
+			}
+		},
+		{
+			"path": "pages/my/my",
+			"style": {
+				"enablePullDownRefresh": false
+			}
 		}
-	    ,{
-            "path" : "pages/cate/cate",
-            "style" :                                                                                    
-            {
-                "enablePullDownRefresh": false
-            }
-            
-        }
-        ,{
-            "path" : "pages/cart/cart",
-            "style" :                                                                                    
-            {
-                "enablePullDownRefresh": false
-            }
-            
-        }
-        ,{
-            "path" : "pages/my/my",
-            "style" :                                                                                    
-            {
-                "enablePullDownRefresh": false
-            }
-            
-        }
-    ],
+	],
 	"globalStyle": {
 		"navigationBarTextStyle": "white",
 		"navigationBarTitleText": "尚品阁",
@@ -72,5 +66,29 @@
 				"selectedIconPath": "static/tab_icons/my-active.png"
 			}
 		]
-	}
+	},
+	"subPackages": [
+		{
+			"root": "subpkg/goods_detail",
+			"pages": [
+				{
+					"path": "goods_detail",
+					"style": {
+						"navigationBarTitleText": "goods_detail"
+					}
+				}
+			]
+		},
+		{
+			"root": "subpkg/goods_list",
+			"pages": [
+				{
+					"path": "goods_list",
+					"style": {
+						"navigationBarTitleText": "goods_list"
+					}
+				}
+			]
+		}
+	]
 }
