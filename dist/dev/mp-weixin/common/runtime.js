@@ -261,7 +261,7 @@
 /******/ 		};
 /******/ 		
 /******/ 		__webpack_require__.f.miniCss = function(chunkId, promises) {
-/******/ 			var cssChunks = {"components/my-search/my-search":1,"node-modules/@dcloudio/uni-ui/lib/uni-search-bar/uni-search-bar":1,"node-modules/@dcloudio/uni-ui/lib/uni-icons/uni-icons":1,"node-modules/@dcloudio/uni-ui/lib/uni-tag/uni-tag":1};
+/******/ 			var cssChunks = {"components/my-search/my-search":1,"components/my-goods/my-goods":1,"node-modules/@dcloudio/uni-ui/lib/uni-search-bar/uni-search-bar":1,"node-modules/@dcloudio/uni-ui/lib/uni-icons/uni-icons":1,"node-modules/@dcloudio/uni-ui/lib/uni-tag/uni-tag":1};
 /******/ 			if(installedCssChunks[chunkId]) promises.push(installedCssChunks[chunkId]);
 /******/ 			else if(installedCssChunks[chunkId] !== 0 && cssChunks[chunkId]) {
 /******/ 				promises.push(installedCssChunks[chunkId] = loadStylesheet(chunkId).then(function() {

@@ -69,35 +69,23 @@
 	},
 	"subPackages": [
 		{
-			"root": "subpkg/goods_detail",
+			"root": "subpkg",
 			"pages": [
 				{
-					"path": "goods_detail",
-					"style": {
-						"navigationBarTitleText": "goods_detail"
-					}
-				}
-			]
-		},
-		{
-			"root": "subpkg/goods_list",
-			"pages": [
+					"path": "goods_detail/goods_detail",
+					"style": {}
+				},
 				{
-					"path": "goods_list",
+					"path": "goods_list/goods_list",
 					"style": {
-						"navigationBarTitleText": "goods_list"
+						"onReachBottomDistance": 150,
+						"enablePullDownRefresh": true,
+						"backgroundColor": "#efefef"
 					}
-				}
-			]
-		},
-		{
-			"root": "subpkg/search",
-			"pages": [
+				},
 				{
-					"path": "search",
-					"style": {
-						"navigationBarTitleText": "search"
-					}
+					"path": "search/search",
+					"style": {}
 				}
 			]
 		}

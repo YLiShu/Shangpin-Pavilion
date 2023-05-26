@@ -7,21 +7,11 @@
   ],
   "subPackages": [
     {
-      "root": "subpkg/goods_detail",
+      "root": "subpkg",
       "pages": [
-        "goods_detail"
-      ]
-    },
-    {
-      "root": "subpkg/goods_list",
-      "pages": [
-        "goods_list"
-      ]
-    },
-    {
-      "root": "subpkg/search",
-      "pages": [
-        "search"
+        "goods_detail/goods_detail",
+        "goods_list/goods_list",
+        "search/search"
       ]
     }
   ],
