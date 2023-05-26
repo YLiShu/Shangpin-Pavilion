@@ -1,37 +1,92 @@
 <template>
-  <div class="goods_list">goods_list</div>
+  <view>
+    <view class="goods-list">
+      <view v-for="(goods, i) in goodsList" :key="i" @click="gotoDetail(goods)">
+        <my-goods :goods="goods"></my-goods>
+      </view>
+    </view>
+  </view>
 </template>
 
-<script lang="ts">
-import Vue from 'vue';
-export default Vue.extend({
-  components: {},
+<script>
+import myGoods from "../../components/my-goods/my-goods";
+export default {
+  components: { myGoods },
   data() {
-    return {}
+    return {
+      // 请求参数对象
+      queryObj: {
+        // 查询关键词
+        query: "",
+        // 商品分类Id
+        cid: "",
+        // 页码值
+        pagenum: 1,
+        // 每页显示多少条数据
+        pagesize: 10,
+      },
+      // 商品列表数据
+      goodsList: [],
+      // 总数
+      total: 0,
+      // 加载节流阀
+      isLoading: false
+    };
   },
-  computed: {},
-  methods: {},
-  watch: {},
+  onLoad(options) {
+    this.queryObj.query = options.query || "";
+    this.queryObj.cid = options.cid || "";
 
-  // 页面周期函数--监听页面加载
-  onLoad() {},
-  // 页面周期函数--监听页面初次渲染完成
-  onReady() {},
-  // 页面周期函数--监听页面显示(not-nvue)
-  onShow() {},
-  // 页面周期函数--监听页面隐藏
-  onHide() {},
-  // 页面周期函数--监听页面卸载
-  onUnload() {},
-  // 页面处理函数--监听用户下拉动作
-  // onPullDownRefresh() { uni.stopPullDownRefresh(); },
-  // 页面处理函数--监听用户上拉触底
-  // onReachBottom() {},
-  // 页面处理函数--监听页面滚动(not-nvue)
-  // onPageScroll(event) {},
-  // 页面处理函数--用户点击右上角分享
-  // onShareAppMessage(options) {},
-}) 
+    // 获取商品列表数据
+    this.getGoodsList();
+  },
+  methods: {
+    async getGoodsList(cb) {
+      this.isLoading = true
+      const { data: res } = await uni.$http.get(
+        "/api/public/v1/goods/search",
+        this.queryObj
+      );
+      this.isLoading = false
+
+      cb && cb()
+
+      if (res.meta.status !== 200) return uni.$showMsg();
+
+      this.goodsList = [...this.goodsList, ...res.message.goods];
+      this.total = res.message.total;
+    },
+    gotoDetail(goods) {
+      uni.navigateTo({
+        url: '/subpkg/goods_detail/goods_detail?goods_id=' + goods.goods_id
+      })
+    }
+  },
+  // 上拉触底事件
+  onReachBottom() {
+    // 判断是否还有下一页数据
+    if (this.queryObj.pagenum * this.queryObj.pagesize >= this.total) return uni.$showMsg('数据加载完毕！') 
+
+    // 判断节流阀状态
+    if (this.isLoading) return
+    // 让页码自增 +1
+    this.queryObj.pagenum ++
+    // 重新获取列表数据
+    this.getGoodsList()
+  },
+  // 下拉刷新事件
+  onPullDownRefresh() {
+    this.queryObj.pagenum = 1
+    this.total = 0
+    this.isLoading = false
+    this.goodsList = []
+
+    this.getGoodsList(() => {
+      uni.stopPullDownRefresh()
+    })
+  }
+};
 </script>
 
-<style lang="scss"></style>
+<style lang="scss">
+</style>
