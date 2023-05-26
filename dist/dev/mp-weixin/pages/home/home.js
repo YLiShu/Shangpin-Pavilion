@@ -103,6 +103,29 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   staticRenderFns: function() { return /* binding */ staticRenderFns; }
 /* harmony export */ });
 var components
+try {
+  components = {
+    mySearch: function () {
+      return __webpack_require__.e(/*! import() | components/my-search/my-search */ "components/my-search/my-search").then(__webpack_require__.bind(__webpack_require__, /*! @/components/my-search/my-search.vue */ "./src/components/my-search/my-search.vue"))
+    },
+  }
+} catch (e) {
+  if (
+    e.message.indexOf("Cannot find module") !== -1 &&
+    e.message.indexOf(".vue") !== -1
+  ) {
+    console.error(e.message)
+    console.error("1. 排查组件名称拼写是否正确")
+    console.error(
+      "2. 排查组件是否符合 easycom 规范，文档：https://uniapp.dcloud.net.cn/collocation/pages?id=easycom"
+    )
+    console.error(
+      "3. 若组件不符合 easycom 规范，需手动引入，并在 components 中注册该组件"
+    )
+  } else {
+    throw e
+  }
+}
 var render = function () {
   var _vm = this
   var _h = _vm.$createElement
@@ -188,6 +211,37 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
@@ -215,7 +269,7 @@ __webpack_require__.r(__webpack_exports__);
           while (1) switch (_context.prev = _context.next) {
             case 0:
               _context.next = 2;
-              return uni.$http.get('/api/public/v1/home/swiperdata');
+              return uni.$http.get("/api/public/v1/home/swiperdata");
             case 2:
               _yield$uni$$http$get = _context.sent;
               res = _yield$uni$$http$get.data;
@@ -241,7 +295,7 @@ __webpack_require__.r(__webpack_exports__);
           while (1) switch (_context2.prev = _context2.next) {
             case 0:
               _context2.next = 2;
-              return uni.$http.get('/api/public/v1/home/catitems');
+              return uni.$http.get("/api/public/v1/home/catitems");
             case 2:
               _yield$uni$$http$get2 = _context2.sent;
               res = _yield$uni$$http$get2.data;
@@ -260,9 +314,9 @@ __webpack_require__.r(__webpack_exports__);
       }))();
     },
     navClickHandler: function navClickHandler(item) {
-      if (item.name === '分类') {
+      if (item.name === "分类") {
         uni.switchTab({
-          url: '/pages/cate/cate'
+          url: "/pages/cate/cate"
         });
       }
     },
@@ -274,7 +328,7 @@ __webpack_require__.r(__webpack_exports__);
           while (1) switch (_context3.prev = _context3.next) {
             case 0:
               _context3.next = 2;
-              return uni.$http.get('/api/public/v1/home/floordata');
+              return uni.$http.get("/api/public/v1/home/floordata");
             case 2:
               _yield$uni$$http$get3 = _context3.sent;
               res = _yield$uni$$http$get3.data;
@@ -287,7 +341,7 @@ __webpack_require__.r(__webpack_exports__);
               // 对数据进行处理
               res.message.forEach(function (floor) {
                 floor.product_list.forEach(function (prod) {
-                  prod.url = '/subpkg/goods_list/goods_list?' + prod.navigator_url.split('?')[1];
+                  prod.url = "/subpkg/goods_list/goods_list?" + prod.navigator_url.split("?")[1];
                 });
               });
               _this3.floorList = res.message;
@@ -297,6 +351,12 @@ __webpack_require__.r(__webpack_exports__);
           }
         }, _callee3);
       }))();
+    },
+    // 跳转到搜索页面
+    gotoSearch: function gotoSearch() {
+      uni.navigateTo({
+        url: "/subpkg/search/search"
+      });
     }
   }
 });

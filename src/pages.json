@@ -89,6 +89,17 @@
 					}
 				}
 			]
+		},
+		{
+			"root": "subpkg/search",
+			"pages": [
+				{
+					"path": "search",
+					"style": {
+						"navigationBarTitleText": "search"
+					}
+				}
+			]
 		}
 	]
 }

@@ -17,6 +17,12 @@
       "pages": [
         "goods_list"
       ]
+    },
+    {
+      "root": "subpkg/search",
+      "pages": [
+        "search"
+      ]
     }
   ],
   "window": {
