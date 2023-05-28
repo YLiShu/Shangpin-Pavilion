@@ -9287,6 +9287,28 @@ target[key] = initWx();
 
 /***/ }),
 
+/***/ "./node_modules/@dcloudio/uni-ui/lib/uni-goods-nav/i18n/index.js":
+/*!***********************************************************************!*\
+  !*** ./node_modules/@dcloudio/uni-ui/lib/uni-goods-nav/i18n/index.js ***!
+  \***********************************************************************/
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _en_json__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./en.json */ "./node_modules/@dcloudio/uni-ui/lib/uni-goods-nav/i18n/en.json");
+/* harmony import */ var _zh_Hans_json__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./zh-Hans.json */ "./node_modules/@dcloudio/uni-ui/lib/uni-goods-nav/i18n/zh-Hans.json");
+/* harmony import */ var _zh_Hant_json__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./zh-Hant.json */ "./node_modules/@dcloudio/uni-ui/lib/uni-goods-nav/i18n/zh-Hant.json");
+
+
+
+/* harmony default export */ __webpack_exports__["default"] = ({
+  en: _en_json__WEBPACK_IMPORTED_MODULE_0__,
+  'zh-Hans': _zh_Hans_json__WEBPACK_IMPORTED_MODULE_1__,
+  'zh-Hant': _zh_Hant_json__WEBPACK_IMPORTED_MODULE_2__
+});
+
+/***/ }),
+
 /***/ "./node_modules/@dcloudio/uni-ui/lib/uni-icons/icons.js":
 /*!**************************************************************!*\
   !*** ./node_modules/@dcloudio/uni-ui/lib/uni-icons/icons.js ***!
@@ -11175,6 +11197,39 @@ function _unsupportedIterableToArray(o, minLen) {
   if (n === "Map" || n === "Set") return Array.from(o);
   if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return (0,_arrayLikeToArray_js__WEBPACK_IMPORTED_MODULE_0__["default"])(o, minLen);
 }
+
+/***/ }),
+
+/***/ "./node_modules/@dcloudio/uni-ui/lib/uni-goods-nav/i18n/en.json":
+/*!**********************************************************************!*\
+  !*** ./node_modules/@dcloudio/uni-ui/lib/uni-goods-nav/i18n/en.json ***!
+  \**********************************************************************/
+/***/ (function(module) {
+
+"use strict";
+module.exports = JSON.parse('{"uni-goods-nav.options.shop":"shop","uni-goods-nav.options.cart":"cart","uni-goods-nav.buttonGroup.addToCart":"add to cart","uni-goods-nav.buttonGroup.buyNow":"buy now"}');
+
+/***/ }),
+
+/***/ "./node_modules/@dcloudio/uni-ui/lib/uni-goods-nav/i18n/zh-Hans.json":
+/*!***************************************************************************!*\
+  !*** ./node_modules/@dcloudio/uni-ui/lib/uni-goods-nav/i18n/zh-Hans.json ***!
+  \***************************************************************************/
+/***/ (function(module) {
+
+"use strict";
+module.exports = JSON.parse('{"uni-goods-nav.options.shop":"店铺","uni-goods-nav.options.cart":"购物车","uni-goods-nav.buttonGroup.addToCart":"加入购物车","uni-goods-nav.buttonGroup.buyNow":"立即购买"}');
+
+/***/ }),
+
+/***/ "./node_modules/@dcloudio/uni-ui/lib/uni-goods-nav/i18n/zh-Hant.json":
+/*!***************************************************************************!*\
+  !*** ./node_modules/@dcloudio/uni-ui/lib/uni-goods-nav/i18n/zh-Hant.json ***!
+  \***************************************************************************/
+/***/ (function(module) {
+
+"use strict";
+module.exports = JSON.parse('{"uni-goods-nav.options.shop":"店鋪","uni-goods-nav.options.cart":"購物車","uni-goods-nav.buttonGroup.addToCart":"加入購物車","uni-goods-nav.buttonGroup.buyNow":"立即購買"}');
 
 /***/ }),
 
