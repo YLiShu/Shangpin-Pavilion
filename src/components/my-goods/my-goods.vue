@@ -22,10 +22,10 @@
 export default {
   name: "my-goods",
   props: {
-	goods: {
-		type: Object,
-		default: {}
-	}
+    goods: {
+      type: Object,
+      default: {},
+    },
   },
   data() {
     return {
@@ -35,10 +35,10 @@ export default {
     };
   },
   filters: {
-	tofixed(num) {
-		return Number(num).toFixed(2)
-	}
-  }
+    tofixed(num) {
+      return Number(num).toFixed(2);
+    },
+  },
 };
 </script>
 
