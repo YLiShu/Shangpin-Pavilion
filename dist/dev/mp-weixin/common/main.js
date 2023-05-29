@@ -83,7 +83,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _App__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./App */ "./src/App.vue");
 /* harmony import */ var _uni_promisify_adaptor__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./uni.promisify.adaptor */ "./src/uni.promisify.adaptor.js");
 /* harmony import */ var _uni_promisify_adaptor__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_uni_promisify_adaptor__WEBPACK_IMPORTED_MODULE_4__);
-/* harmony import */ var _escook_request_miniprogram__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @escook/request-miniprogram */ "./node_modules/@escook/request-miniprogram/miniprogram_dist/index.js");
+/* harmony import */ var _store_index__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./store/index */ "./src/store/index.js");
+/* harmony import */ var _escook_request_miniprogram__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @escook/request-miniprogram */ "./node_modules/@escook/request-miniprogram/miniprogram_dist/index.js");
 /* provided dependency */ var wx = __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/wx.js */ "./node_modules/@dcloudio/uni-mp-weixin/dist/wx.js")["default"];
 /* provided dependency */ var uni = __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ "./node_modules/@dcloudio/uni-mp-weixin/dist/index.js")["default"];
 /* provided dependency */ var createApp = __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ "./node_modules/@dcloudio/uni-mp-weixin/dist/index.js")["createApp"];
@@ -97,22 +98,23 @@ wx.__webpack_require_UNI_MP_PLUGIN__ = __webpack_require__;
 
 
 
+
 // 导入网络请求的包
 
-uni.$http = _escook_request_miniprogram__WEBPACK_IMPORTED_MODULE_5__.$http;
+uni.$http = _escook_request_miniprogram__WEBPACK_IMPORTED_MODULE_6__.$http;
 
 // 请求的根路径
-_escook_request_miniprogram__WEBPACK_IMPORTED_MODULE_5__.$http.baseUrl = 'https://api-hmugo-web.itheima.net';
+_escook_request_miniprogram__WEBPACK_IMPORTED_MODULE_6__.$http.baseUrl = 'https://api-hmugo-web.itheima.net';
 
 // 请求拦截器
-_escook_request_miniprogram__WEBPACK_IMPORTED_MODULE_5__.$http.beforeRequest = function (options) {
+_escook_request_miniprogram__WEBPACK_IMPORTED_MODULE_6__.$http.beforeRequest = function (options) {
   uni.showLoading({
     title: '数据加载中...'
   });
 };
 
 // 响应拦截器
-_escook_request_miniprogram__WEBPACK_IMPORTED_MODULE_5__.$http.afterRequest = function () {
+_escook_request_miniprogram__WEBPACK_IMPORTED_MODULE_6__.$http.afterRequest = function () {
   uni.hideLoading();
 };
 
@@ -128,7 +130,9 @@ uni.$showMsg = function () {
 };
 vue__WEBPACK_IMPORTED_MODULE_2__["default"].config.productionTip = false;
 _App__WEBPACK_IMPORTED_MODULE_3__["default"].mpType = 'app';
-var app = new vue__WEBPACK_IMPORTED_MODULE_2__["default"](_objectSpread({}, _App__WEBPACK_IMPORTED_MODULE_3__["default"]));
+var app = new vue__WEBPACK_IMPORTED_MODULE_2__["default"](_objectSpread(_objectSpread({}, _App__WEBPACK_IMPORTED_MODULE_3__["default"]), {}, {
+  store: _store_index__WEBPACK_IMPORTED_MODULE_5__["default"]
+}));
 createApp(app).$mount();
 
 /***/ }),

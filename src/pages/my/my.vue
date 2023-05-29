@@ -3,10 +3,13 @@
 </template>
 
 <script>
+import badgeMix from '../../mixin/tabbar-badge'
+
 export default {
   data() {
     return {};
   },
+  mixins: [badgeMix]
 };
 </script>
 

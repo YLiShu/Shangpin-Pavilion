@@ -103,6 +103,29 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   staticRenderFns: function() { return /* binding */ staticRenderFns; }
 /* harmony export */ });
 var components
+try {
+  components = {
+    uniNumberBox: function () {
+      return __webpack_require__.e(/*! import() | node-modules/@dcloudio/uni-ui/lib/uni-number-box/uni-number-box */ "node-modules/@dcloudio/uni-ui/lib/uni-number-box/uni-number-box").then(__webpack_require__.bind(__webpack_require__, /*! @dcloudio/uni-ui/lib/uni-number-box/uni-number-box.vue */ "./node_modules/@dcloudio/uni-ui/lib/uni-number-box/uni-number-box.vue"))
+    },
+  }
+} catch (e) {
+  if (
+    e.message.indexOf("Cannot find module") !== -1 &&
+    e.message.indexOf(".vue") !== -1
+  ) {
+    console.error(e.message)
+    console.error("1. 排查组件名称拼写是否正确")
+    console.error(
+      "2. 排查组件是否符合 easycom 规范，文档：https://uniapp.dcloud.net.cn/collocation/pages?id=easycom"
+    )
+    console.error(
+      "3. 若组件不符合 easycom 规范，需手动引入，并在 components 中注册该组件"
+    )
+  } else {
+    throw e
+  }
+}
 var render = function () {
   var _vm = this
   var _h = _vm.$createElement
@@ -152,7 +175,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: "my-goods",
@@ -160,6 +182,14 @@ __webpack_require__.r(__webpack_exports__);
     goods: {
       type: Object,
       default: {}
+    },
+    showRadio: {
+      type: Boolean,
+      default: false
+    },
+    showNumberBox: {
+      type: Boolean,
+      default: false
     }
   },
   data: function data() {
@@ -171,6 +201,17 @@ __webpack_require__.r(__webpack_exports__);
   filters: {
     tofixed: function tofixed(num) {
       return Number(num).toFixed(2);
+    }
+  },
+  methods: {
+    radioCilckHandler: function radioCilckHandler() {
+      this.$emit('radioChange', {
+        goods_id: this.goods.goods_id,
+        goods_state: !this.goods.goods_state
+      });
+    },
+    changeValue: function changeValue(value) {
+      console.log('返回数值：', value);
     }
   }
 });

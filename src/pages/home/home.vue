@@ -65,6 +65,8 @@
 </template>
 
 <script>
+import badgeMix from '../../mixin/tabbar-badge'
+
 export default {
   data() {
     return {
@@ -126,6 +128,7 @@ export default {
       });
     },
   },
+  mixins: [badgeMix]
 };
 </script>
 

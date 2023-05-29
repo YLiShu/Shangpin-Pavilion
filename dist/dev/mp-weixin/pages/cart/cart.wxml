@@ -1,1 +1,1 @@
-<view>Cart</view>
+<view><view class="cart-title"><uni-icons vue-id="1775f8c0-1" type="shop" size="18" bind:__l="__l"></uni-icons><text class="cart-title-text">购物车</text></view><view class="cart-list"><block wx:for="{{cart}}" wx:for-item="goods" wx:for-index="i" wx:key="i"><block><my-goods vue-id="{{'1775f8c0-2-'+i}}" goods="{{goods}}" showNumberBox="{{true}}" showRadio="{{true}}" data-event-opts="{{[['^radioChange',[['radioChangeHandler']]]]}}" bind:radioChange="__e" bind:__l="__l"></my-goods></block></block></view></view>

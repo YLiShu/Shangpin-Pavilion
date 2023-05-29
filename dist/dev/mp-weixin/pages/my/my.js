@@ -123,15 +123,18 @@ createPage(_pages_my_my_vue__WEBPACK_IMPORTED_MODULE_2__["default"]);
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 __webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _mixin_tabbar_badge__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../mixin/tabbar-badge */ "./src/mixin/tabbar-badge.js");
 //
 //
 //
 //
 
+
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {};
-  }
+  },
+  mixins: [_mixin_tabbar_badge__WEBPACK_IMPORTED_MODULE_0__["default"]]
 });
 
 /***/ })
