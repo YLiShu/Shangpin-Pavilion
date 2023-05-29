@@ -18,6 +18,7 @@
 </template>
 
 <script>
+// push
 export default {
   name: "my-goods",
   props: {
