@@ -173,6 +173,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _babel_runtime_helpers_asyncToGenerator__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/helpers/asyncToGenerator */ "./node_modules/@babel/runtime/helpers/esm/asyncToGenerator.js");
 /* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @babel/runtime/regenerator */ "./node_modules/@dcloudio/vue-cli-plugin-uni/packages/@babel/runtime/regenerator/index.js");
 /* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _mixin_tabbar_badge__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../mixin/tabbar-badge */ "./src/mixin/tabbar-badge.js");
 /* provided dependency */ var uni = __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ "./node_modules/@dcloudio/uni-mp-weixin/dist/index.js")["default"];
 
 
@@ -242,6 +243,7 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
@@ -358,7 +360,8 @@ __webpack_require__.r(__webpack_exports__);
         url: "/subpkg/search/search"
       });
     }
-  }
+  },
+  mixins: [_mixin_tabbar_badge__WEBPACK_IMPORTED_MODULE_2__["default"]]
 });
 
 /***/ }),

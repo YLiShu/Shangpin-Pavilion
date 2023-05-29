@@ -1,19 +1,9 @@
 <template>
   <view v-if="goods_info.goods_name" class="goods-detail">
-    <swiper
-      class="goods_swiper"
-      :indicator-dots="true"
-      :autoplay="true"
-      :interval="1000"
-      :duration="1000"
-      :circular="true"
-    >
+    <swiper class="goods_swiper" :indicator-dots="true" :autoplay="true" :interval="1000" :duration="1000"
+      :circular="true">
       <swiper-item v-for="(goods, i) in goods_info.pics" :key="i">
-        <image
-          class="goods_pic"
-          :src="goods.pics_big"
-          @click="preview(i)"
-        ></image>
+        <image class="goods_pic" :src="goods.pics_big" @click="preview(i)"></image>
       </swiper-item>
     </swiper>
     <view class="goods-info-box">
@@ -35,18 +25,14 @@
       <!-- buttonGroup 右侧按钮的配置项 -->
       <!-- click 左侧按钮的点击事件处理函数 -->
       <!-- buttonClick 右侧按钮的点击事件处理函数 -->
-      <uni-goods-nav
-        :options="options"
-        :fill="true"
-        :button-group="buttonGroup"
-        @click="onClick"
-        @buttonClick="buttonClick"
-      />
+      <uni-goods-nav :options="options" :fill="true" :button-group="buttonGroup" @click="onClick"
+        @buttonClick="buttonClick" />
     </view>
   </view>
 </template>
 
 <script>
+import { mapState, mapMutations, mapGetters } from 'vuex'
 export default {
   data() {
     return {
@@ -80,6 +66,22 @@ export default {
         },
       ],
     };
+  },
+  computed: {
+    ...mapState('m_cart', ['cart']),
+    ...mapGetters('m_cart', ['total'])
+  },
+  watch: {
+    total: {
+      handler(newVal) {
+        const findResult = this.options.find(x => x.text === '购物车')
+
+        if (findResult) {
+          findResult.info = newVal
+        }
+      },
+      immediate: true
+    }
   },
   onLoad(options) {
     const goods_id = options.goods_id;
@@ -122,9 +124,21 @@ export default {
       }
     },
     buttonClick(e) {
-      console.log(e);
-      this.options[1].info++;
+      if (e.content.text === '加入购物车') {
+        const goods = {
+          goods_id: this.goods_info.goods_id,
+          goods_name: this.goods_info.goods_name,
+          goods_price: this.goods_info.goods_price,
+          goods_count: 1,
+          goods_small_logo: this.goods_info.goods_small_logo,
+          goods_state: true
+        }
+
+        this.addToCart(goods)
+      }
     },
+    // 把m_cart模块中addToCart方法映射到当前页面使用
+    ...mapMutations('m_cart', ['addToCart'])
   },
 };
 </script>

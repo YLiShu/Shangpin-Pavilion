@@ -49,6 +49,8 @@
 
 <script>
 import mySearch from "../../components/my-search/my-search";
+import badgeMix from '../../mixin/tabbar-badge'
+
 export default {
   components: { mySearch },
   data() {
@@ -99,6 +101,7 @@ export default {
       });
     },
   },
+  mixins: [badgeMix]
 };
 </script>
 
