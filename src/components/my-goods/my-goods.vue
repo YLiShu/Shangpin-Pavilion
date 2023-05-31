@@ -10,7 +10,7 @@
         <view class="goods-name">{{ goods.goods_name }}</view>
         <view class="goods-info-box">
           <view class="goods-price">￥{{ goods.goods_price | tofixed }}</view>
-          <uni-number-box v-if="showNumberBox" v-model="goods.goods_count" @change="changeValue" />
+          <uni-number-box :min="1" v-if="showNumberBox" v-model="goods.goods_count" @change="numChangeHandler" />
         </view>
       </view>
     </view>
@@ -54,8 +54,11 @@ export default {
         goods_state: !this.goods.goods_state
       })
     },
-    changeValue(value) {
-      console.log('返回数值：', value);
+    numChangeHandler(value) {
+      this.$emit('numChange', {
+        goods_id: this.goods.goods_id,
+        goods_count: Number(value)
+      })
     },
   },
 };
@@ -82,6 +85,7 @@ export default {
 
   .goods-item-right {
     display: flex;
+    flex: 1;
     flex-direction: column;
     justify-content: space-between;
 
@@ -91,7 +95,8 @@ export default {
 
     .goods-info-box {
       display: flex;
-      justify-content: space-around;
+      justify-content: space-between;
+      align-items: center;
 
       .goods-price {
         color: #ff0000;

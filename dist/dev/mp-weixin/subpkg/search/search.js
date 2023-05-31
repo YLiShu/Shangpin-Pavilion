@@ -224,6 +224,14 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
@@ -279,10 +287,7 @@ __webpack_require__.r(__webpack_exports__);
               return _context.abrupt("return", uni.$showMsg());
             case 9:
               _this2.searchResults = res.message;
-
-              // 保存搜索关键词
-              _this2.saveSearchHistory();
-            case 11:
+            case 10:
             case "end":
               return _context.stop();
           }
@@ -293,6 +298,8 @@ __webpack_require__.r(__webpack_exports__);
       uni.navigateTo({
         url: "/subpkg/goods_detail/goods_detail?goods_id=" + item.goods_id
       });
+      // 保存搜索关键词
+      this.saveSearchHistory();
     },
     saveSearchHistory: function saveSearchHistory() {
       if (this.historyList.includes(this.kw)) {
@@ -302,20 +309,23 @@ __webpack_require__.r(__webpack_exports__);
       } else {
         this.historyList.unshift(this.kw);
       }
-      uni.setStorageSync('search_history', JSON.stringify(this.historyList));
+      uni.setStorageSync("search_history", JSON.stringify(this.historyList));
     },
     cleanHistory: function cleanHistory() {
       this.historyList = [];
-      uni.setStorageSync('search_history', JSON.stringify(this.historyList));
+      uni.setStorageSync("search_history", JSON.stringify(this.historyList));
     },
     gotoGoodsList: function gotoGoodsList(kw) {
+      if (kw.trim() === "") return;
       uni.navigateTo({
-        url: '/subpkg/goods_list/goods_list?query=' + kw
+        url: "/subpkg/goods_list/goods_list?query=" + kw
       });
+      // 保存搜索关键词
+      this.saveSearchHistory();
     }
   },
   onLoad: function onLoad() {
-    this.historyList = JSON.parse(uni.getStorageSync('search_history') || '[]');
+    this.historyList = JSON.parse(uni.getStorageSync("search_history") || "[]");
   }
 });
 
