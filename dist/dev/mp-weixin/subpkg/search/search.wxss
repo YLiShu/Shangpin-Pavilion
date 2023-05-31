@@ -33,8 +33,24 @@
 .search-box {
   position: -webkit-sticky;
   position: sticky;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   top: 0;
   z-index: 999;
+  background-color: #ff0000;
+  box-sizing: border-box;
+  padding: 0 5px;
+}
+.search-box .search-bar-wrapper {
+  flex: 1;
+}
+.search-box .button-box {
+  height: 56px;
+  display: flex;
+  align-items: center;
+  background-color: #ff0000;
 }
 .sugg-list {
   padding: 0 5px;

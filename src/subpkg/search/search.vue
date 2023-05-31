@@ -1,14 +1,22 @@
 <template>
   <view>
     <view class="search-box">
-      <uni-search-bar
-        @input="input"
-        :radius="100"
-        cancelButton="none"
-        :placeholder="'请输入搜索内容'"
-        :focus="true"
-      >
-      </uni-search-bar>
+      <view class="search-bar-wrapper">
+        <uni-search-bar
+          @input="input"
+          :radius="100"
+          cancelButton="none"
+          :placeholder="'请输入搜索内容'"
+          :focus="true"
+          @confirm="gotoGoodsList(kw)"
+        >
+        </uni-search-bar>
+      </view>
+      <view class="button-box">
+        <button type="default" size="mini" @click="gotoGoodsList(kw)">
+          搜索
+        </button>
+      </view>
     </view>
     <view class="sugg-list" v-show="kw">
       <view
@@ -81,38 +89,40 @@ export default {
 
       if (res.meta.status != 200) return uni.$showMsg();
       this.searchResults = res.message;
-
-      // 保存搜索关键词
-      this.saveSearchHistory();
     },
     gotoDetail(item) {
       uni.navigateTo({
         url: "/subpkg/goods_detail/goods_detail?goods_id=" + item.goods_id,
       });
+      // 保存搜索关键词
+      this.saveSearchHistory();
     },
     saveSearchHistory() {
       if (this.historyList.includes(this.kw)) {
-        const indexToRemove = this.historyList.indexOf(this.kw)
+        const indexToRemove = this.historyList.indexOf(this.kw);
         this.historyList.splice(indexToRemove, 1);
         this.historyList.unshift(this.kw);
       } else {
         this.historyList.unshift(this.kw);
       }
-      uni.setStorageSync('search_history', JSON.stringify(this.historyList))
+      uni.setStorageSync("search_history", JSON.stringify(this.historyList));
     },
     cleanHistory() {
-      this.historyList = []
-      uni.setStorageSync('search_history', JSON.stringify(this.historyList))
+      this.historyList = [];
+      uni.setStorageSync("search_history", JSON.stringify(this.historyList));
     },
     gotoGoodsList(kw) {
+      if (kw.trim() === "") return;
       uni.navigateTo({
-        url: '/subpkg/goods_list/goods_list?query=' + kw
-      })
-    }
+        url: "/subpkg/goods_list/goods_list?query=" + kw,
+      });
+      // 保存搜索关键词
+      this.saveSearchHistory();
+    },
   },
   onLoad() {
-    this.historyList = JSON.parse(uni.getStorageSync('search_history') || '[]')
-  }
+    this.historyList = JSON.parse(uni.getStorageSync("search_history") || "[]");
+  },
 };
 </script>
 
@@ -123,8 +133,26 @@ export default {
 
 .search-box {
   position: sticky;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   top: 0;
   z-index: 999;
+  background-color: #ff0000;
+  box-sizing: border-box;
+  padding: 0 5px;
+
+  .search-bar-wrapper {
+    flex: 1;
+  }
+
+  .button-box {
+    height: 56px;
+    display: flex;
+    align-items: center;
+    background-color: #ff0000;
+  }
 }
 
 .sugg-list {

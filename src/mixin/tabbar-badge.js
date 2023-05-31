@@ -12,6 +12,10 @@ export default {
                     index: 2,
                     text: this.total.toString()
                 })
+            } else {
+                uni.removeTabBarBadge({
+                    index: 2
+                })
             }
         }
     },

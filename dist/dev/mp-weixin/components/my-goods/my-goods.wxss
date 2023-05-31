@@ -45,6 +45,7 @@
 }
 .goods-item .goods-item-right {
   display: flex;
+  flex: 1;
   flex-direction: column;
   justify-content: space-between;
 }
@@ -53,7 +54,8 @@
 }
 .goods-item .goods-item-right .goods-info-box {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
+  align-items: center;
 }
 .goods-item .goods-item-right .goods-info-box .goods-price {
   color: #ff0000;

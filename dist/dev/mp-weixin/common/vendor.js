@@ -5552,7 +5552,7 @@ function type(obj) {
 
 function flushCallbacks$1(vm) {
     if (vm.__next_tick_callbacks && vm.__next_tick_callbacks.length) {
-        if (({"NODE_ENV":"development","VUE_APP_DARK_MODE":"false","VUE_APP_NAME":"","VUE_APP_PLATFORM":"mp-weixin","BASE_URL":"/"}).VUE_APP_DEBUG) {
+        if (({"NODE_ENV":"development","VUE_APP_DARK_MODE":"false","VUE_APP_NAME":"尚品阁","VUE_APP_PLATFORM":"mp-weixin","BASE_URL":"/"}).VUE_APP_DEBUG) {
             var mpInstance = vm.$scope;
             console.log('[' + (+new Date) + '][' + (mpInstance.is || mpInstance.route) + '][' + vm._uid +
                 ']:flushCallbacks[' + vm.__next_tick_callbacks.length + ']');
@@ -5573,14 +5573,14 @@ function nextTick$1(vm, cb) {
     //1.nextTick 之前 已 setData 且 setData 还未回调完成
     //2.nextTick 之前存在 render watcher
     if (!vm.__next_tick_pending && !hasRenderWatcher(vm)) {
-        if(({"NODE_ENV":"development","VUE_APP_DARK_MODE":"false","VUE_APP_NAME":"","VUE_APP_PLATFORM":"mp-weixin","BASE_URL":"/"}).VUE_APP_DEBUG){
+        if(({"NODE_ENV":"development","VUE_APP_DARK_MODE":"false","VUE_APP_NAME":"尚品阁","VUE_APP_PLATFORM":"mp-weixin","BASE_URL":"/"}).VUE_APP_DEBUG){
             var mpInstance = vm.$scope;
             console.log('[' + (+new Date) + '][' + (mpInstance.is || mpInstance.route) + '][' + vm._uid +
                 ']:nextVueTick');
         }
         return nextTick(cb, vm)
     }else{
-        if(({"NODE_ENV":"development","VUE_APP_DARK_MODE":"false","VUE_APP_NAME":"","VUE_APP_PLATFORM":"mp-weixin","BASE_URL":"/"}).VUE_APP_DEBUG){
+        if(({"NODE_ENV":"development","VUE_APP_DARK_MODE":"false","VUE_APP_NAME":"尚品阁","VUE_APP_PLATFORM":"mp-weixin","BASE_URL":"/"}).VUE_APP_DEBUG){
             var mpInstance$1 = vm.$scope;
             console.log('[' + (+new Date) + '][' + (mpInstance$1.is || mpInstance$1.route) + '][' + vm._uid +
                 ']:nextMPTick');
@@ -5676,7 +5676,7 @@ var patch = function(oldVnode, vnode) {
     });
     var diffData = this.$shouldDiffData === false ? data : diff(data, mpData);
     if (Object.keys(diffData).length) {
-      if (({"NODE_ENV":"development","VUE_APP_DARK_MODE":"false","VUE_APP_NAME":"","VUE_APP_PLATFORM":"mp-weixin","BASE_URL":"/"}).VUE_APP_DEBUG) {
+      if (({"NODE_ENV":"development","VUE_APP_DARK_MODE":"false","VUE_APP_NAME":"尚品阁","VUE_APP_PLATFORM":"mp-weixin","BASE_URL":"/"}).VUE_APP_DEBUG) {
         console.log('[' + (+new Date) + '][' + (mpInstance.is || mpInstance.route) + '][' + this._uid +
           ']差量更新',
           JSON.stringify(diffData));
@@ -8843,8 +8843,8 @@ function populateParameters(result) {
   // wx.getAccountInfoSync
 
   var parameters = {
-    appId: "",
-    appName: "",
+    appId: "__UNI__096D2FB",
+    appName: "尚品阁",
     appVersion: "1.0.0",
     appVersionCode: "100",
     appLanguage: getAppLanguage(hostLanguage),
@@ -8942,8 +8942,8 @@ var getAppBaseInfo = {
     var _hostName = getHostName(result);
     var hostLanguage = language.replace('_', '-');
     result = sortObject(Object.assign(result, {
-      appId: "",
-      appName: "",
+      appId: "__UNI__096D2FB",
+      appName: "尚品阁",
       appVersion: "1.0.0",
       appVersionCode: "100",
       appLanguage: getAppLanguage(hostLanguage),
@@ -9625,7 +9625,7 @@ function initData(vueOptions, context) {
     try {
       data = data.call(context); // 支持 Vue.prototype 上挂的数据
     } catch (e) {
-      if (({"NODE_ENV":"development","VUE_APP_DARK_MODE":"false","VUE_APP_NAME":"","VUE_APP_PLATFORM":"mp-weixin","BASE_URL":"/"}).VUE_APP_DEBUG) {
+      if (({"NODE_ENV":"development","VUE_APP_DARK_MODE":"false","VUE_APP_NAME":"尚品阁","VUE_APP_PLATFORM":"mp-weixin","BASE_URL":"/"}).VUE_APP_DEBUG) {
         console.warn('根据 Vue 的 data 函数初始化小程序 data 失败，请尽量确保 data 函数中不访问 vm 对象，否则可能影响首次数据渲染速度。', data);
       }
     }
@@ -11601,6 +11601,104 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./node_modules/@dcloudio/uni-ui/lib/uni-swipe-action-item/bindingx.js":
+/*!*****************************************************************************!*\
+  !*** ./node_modules/@dcloudio/uni-ui/lib/uni-swipe-action-item/bindingx.js ***!
+  \*****************************************************************************/
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+var bindIngXMixins = {};
+/* harmony default export */ __webpack_exports__["default"] = (bindIngXMixins);
+
+/***/ }),
+
+/***/ "./node_modules/@dcloudio/uni-ui/lib/uni-swipe-action-item/mpother.js":
+/*!****************************************************************************!*\
+  !*** ./node_modules/@dcloudio/uni-ui/lib/uni-swipe-action-item/mpother.js ***!
+  \****************************************************************************/
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+var otherMixins = {};
+/* harmony default export */ __webpack_exports__["default"] = (otherMixins);
+
+/***/ }),
+
+/***/ "./node_modules/@dcloudio/uni-ui/lib/uni-swipe-action-item/mpwxs.js":
+/*!**************************************************************************!*\
+  !*** ./node_modules/@dcloudio/uni-ui/lib/uni-swipe-action-item/mpwxs.js ***!
+  \**************************************************************************/
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+var mpMixins = {};
+var is_pc = null;
+mpMixins = {
+  data: function data() {
+    return {
+      is_show: 'none'
+    };
+  },
+  watch: {
+    show: function show(newVal) {
+      this.is_show = this.show;
+    }
+  },
+  created: function created() {
+    this.swipeaction = this.getSwipeAction();
+    if (this.swipeaction && Array.isArray(this.swipeaction.children)) {
+      this.swipeaction.children.push(this);
+    }
+  },
+  mounted: function mounted() {
+    this.is_show = this.show;
+  },
+  methods: {
+    // wxs 中调用
+    closeSwipe: function closeSwipe(e) {
+      if (this.autoClose && this.swipeaction) {
+        this.swipeaction.closeOther(this);
+      }
+    },
+    change: function change(e) {
+      this.$emit('change', e.open);
+      if (this.is_show !== e.open) {
+        this.is_show = e.open;
+      }
+    },
+    appTouchStart: function appTouchStart(e) {
+      if (is_pc) return;
+      var clientX = e.changedTouches[0].clientX;
+      this.clientX = clientX;
+      this.timestamp = new Date().getTime();
+    },
+    appTouchEnd: function appTouchEnd(e, index, item, position) {
+      if (is_pc) return;
+      var clientX = e.changedTouches[0].clientX;
+      // fixed by xxxx 模拟点击事件，解决 ios 13 点击区域错位的问题
+      var diff = Math.abs(this.clientX - clientX);
+      var time = new Date().getTime() - this.timestamp;
+      if (diff < 40 && time < 300) {
+        this.$emit('click', {
+          content: item,
+          index: index,
+          position: position
+        });
+      }
+    },
+    onClickForPC: function onClickForPC(index, item, position) {
+      if (!is_pc) return;
+    }
+  }
+};
+/* harmony default export */ __webpack_exports__["default"] = (mpMixins);
+
+/***/ }),
+
 /***/ "./src/mixin/tabbar-badge.js":
 /*!***********************************!*\
   !*** ./src/mixin/tabbar-badge.js ***!
@@ -11626,6 +11724,10 @@ function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { va
         uni.setTabBarBadge({
           index: 2,
           text: this.total.toString()
+        });
+      } else {
+        uni.removeTabBarBadge({
+          index: 2
         });
       }
     }
@@ -11679,6 +11781,31 @@ __webpack_require__.r(__webpack_exports__);
         this.commit('m_cart/saveToStorage');
       }
     },
+    updateGoodsCount: function updateGoodsCount(state, goods_info) {
+      var findResult = state.cart.find(function (x) {
+        return x.goods_id === goods_info.goods_id;
+      });
+      if (findResult) {
+        findResult.goods_count = goods_info.goods_count;
+        this.commit('m_cart/saveToStorage');
+      }
+    },
+    deleteFromCart: function deleteFromCart(state, goods) {
+      var findIndex = state.cart.findIndex(function (x) {
+        return x.goods_id === goods.goods_id;
+      });
+      if (findIndex !== -1) {
+        state.cart.splice(findIndex, 1);
+        this.commit('m_cart/saveToStorage');
+      }
+    },
+    // 更新勾选状态
+    updateAllGoodsState: function updateAllGoodsState(state, newState) {
+      state.cart.forEach(function (x) {
+        return x.goods_state = newState;
+      });
+      this.commit('m_cart/saveToStorage');
+    },
     // 将购物车中数据持久化存储到本地
     saveToStorage: function saveToStorage(state) {
       uni.setStorageSync('cart', JSON.stringify(state.cart));
@@ -11687,11 +11814,25 @@ __webpack_require__.r(__webpack_exports__);
   getters: {
     // 统计购物车中商品总数量
     total: function total(state) {
-      var count = 0;
-      state.cart.forEach(function (goods) {
-        count += goods.goods_count;
-      });
-      return count;
+      return state.cart.reduce(function (count, item) {
+        return count += item.goods_count;
+      }, 0);
+    },
+    // 勾选的商品的总数量
+    checkedCount: function checkedCount(state) {
+      return state.cart.filter(function (x) {
+        return x.goods_state;
+      }).reduce(function (total, item) {
+        return total += item.goods_count;
+      }, 0);
+    },
+    // 勾选商品的总价格
+    checkedPrice: function checkedPrice(state) {
+      return state.cart.filter(function (x) {
+        return x.goods_state;
+      }).reduce(function (price, item) {
+        return price += item.goods_count * item.goods_price;
+      }, 0).toFixed(2);
     }
   }
 });
@@ -11707,23 +11848,68 @@ __webpack_require__.r(__webpack_exports__);
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! vue */ "./node_modules/@dcloudio/vue-cli-plugin-uni/packages/mp-vue/dist/mp.runtime.esm.js");
-/* harmony import */ var vuex__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! vuex */ "./node_modules/@dcloudio/vue-cli-plugin-uni/packages/vuex3/dist/vuex.common.js");
-/* harmony import */ var vuex__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(vuex__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var vuex__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! vuex */ "./node_modules/@dcloudio/vue-cli-plugin-uni/packages/vuex3/dist/vuex.common.js");
+/* harmony import */ var vuex__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(vuex__WEBPACK_IMPORTED_MODULE_3__);
 /* harmony import */ var _cart_cart__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./cart/cart */ "./src/store/cart/cart.js");
+/* harmony import */ var _user_user__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./user/user */ "./src/store/user/user.js");
 // 导入 Vue 和 Vuex
 
 
 
 
+
 // 将Vuex安装为Vue插件
-vue__WEBPACK_IMPORTED_MODULE_0__["default"].use((vuex__WEBPACK_IMPORTED_MODULE_2___default()));
+vue__WEBPACK_IMPORTED_MODULE_0__["default"].use((vuex__WEBPACK_IMPORTED_MODULE_3___default()));
 
 // 创建并暴露Store的实例对象
-/* harmony default export */ __webpack_exports__["default"] = (new (vuex__WEBPACK_IMPORTED_MODULE_2___default().Store)({
+/* harmony default export */ __webpack_exports__["default"] = (new (vuex__WEBPACK_IMPORTED_MODULE_3___default().Store)({
   modules: {
-    'm_cart': _cart_cart__WEBPACK_IMPORTED_MODULE_1__["default"]
+    'm_cart': _cart_cart__WEBPACK_IMPORTED_MODULE_1__["default"],
+    'm_user': _user_user__WEBPACK_IMPORTED_MODULE_2__["default"]
   }
 }));
+
+/***/ }),
+
+/***/ "./src/store/user/user.js":
+/*!********************************!*\
+  !*** ./src/store/user/user.js ***!
+  \********************************/
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* provided dependency */ var uni = __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ "./node_modules/@dcloudio/uni-mp-weixin/dist/index.js")["default"];
+/* harmony default export */ __webpack_exports__["default"] = ({
+  // 开启命名空间
+  namespaced: true,
+  // state 数据
+  state: function state() {
+    return {
+      // 收获地址
+      address: JSON.parse(uni.getStorageSync('address') || '{}')
+    };
+  },
+  // 方法
+  mutations: {
+    // 更新收货地址
+    updateAddress: function updateAddress(state, address) {
+      state.address = address;
+      this.commit('m_user/saveToStorage');
+    },
+    // 数据持久化存储到本地
+    saveToStorage: function saveToStorage(state) {
+      uni.setStorageSync('address', JSON.stringify(state.address));
+    }
+  },
+  // 数据包裹器
+  getters: {
+    addressStr: function addressStr(state) {
+      if (!Object.keys(state.address).length) return '';
+      return state.address.provinceName + state.address.cityName + state.address.countyName + state.address.detailInfo;
+    }
+  }
+});
 
 /***/ }),
 

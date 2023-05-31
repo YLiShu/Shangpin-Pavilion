@@ -176,6 +176,7 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 
+// push
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: "my-goods",
   props: {
@@ -210,8 +211,11 @@ __webpack_require__.r(__webpack_exports__);
         goods_state: !this.goods.goods_state
       });
     },
-    changeValue: function changeValue(value) {
-      console.log('返回数值：', value);
+    numChangeHandler: function numChangeHandler(value) {
+      this.$emit('numChange', {
+        goods_id: this.goods.goods_id,
+        goods_count: Number(value)
+      });
     }
   }
 });
