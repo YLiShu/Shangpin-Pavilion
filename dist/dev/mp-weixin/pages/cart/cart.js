@@ -121,7 +121,7 @@ try {
       return __webpack_require__.e(/*! import() | components/my-goods/my-goods */ "components/my-goods/my-goods").then(__webpack_require__.bind(__webpack_require__, /*! @/components/my-goods/my-goods.vue */ "./src/components/my-goods/my-goods.vue"))
     },
     mySettle: function () {
-      return __webpack_require__.e(/*! import() | components/my-settle/my-settle */ "components/my-settle/my-settle").then(__webpack_require__.bind(__webpack_require__, /*! @/components/my-settle/my-settle.vue */ "./src/components/my-settle/my-settle.vue"))
+      return Promise.all(/*! import() | components/my-settle/my-settle */[__webpack_require__.e("common/vendor"), __webpack_require__.e("components/my-settle/my-settle")]).then(__webpack_require__.bind(__webpack_require__, /*! @/components/my-settle/my-settle.vue */ "./src/components/my-settle/my-settle.vue"))
     },
   }
 } catch (e) {
@@ -252,7 +252,7 @@ var myGoods = function myGoods() {
   }).bind(null, __webpack_require__))['catch'](__webpack_require__.oe);
 };
 var MySettle = function MySettle() {
-  __webpack_require__.e(/*! require.ensure | components/my-settle/my-settle */ "components/my-settle/my-settle").then((function () {
+  Promise.all(/*! require.ensure | components/my-settle/my-settle */[__webpack_require__.e("common/vendor"), __webpack_require__.e("components/my-settle/my-settle")]).then((function () {
     return resolve(__webpack_require__(/*! ../../components/my-settle/my-settle.vue */ "./src/components/my-settle/my-settle.vue"));
   }).bind(null, __webpack_require__))['catch'](__webpack_require__.oe);
 };

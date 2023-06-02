@@ -111,6 +111,14 @@ _escook_request_miniprogram__WEBPACK_IMPORTED_MODULE_6__.$http.beforeRequest = f
   uni.showLoading({
     title: '数据加载中...'
   });
+
+  // 判断请求的是否为有权限的API接口
+  if (options.url.indexOf('/my/') !== -1) {
+    // 为请求头添加身份认证字段
+    options.header = {
+      Authorization: _store_index__WEBPACK_IMPORTED_MODULE_5__["default"].state.m_user.token
+    };
+  }
 };
 
 // 响应拦截器
