@@ -1,3 +1,57 @@
+# Introduction
+
+- [English](#introduction)
+- [中文](#介绍)
+
+# English
+
+# Shangpinge
+Shangpinge is a shopping mini-program based on the uniapp framework, designed for WeChat users to provide a simple, convenient, and fast shopping experience. This mini-program integrates product display, shopping cart management, order processing, payment, and other functions, supporting users to shop online, place orders, and make payments.
+
+# Installation and Running
+The project depends on the npm package management tool, make sure that npm has been installed in your environment.
+
+# Install Dependencies
+```bash
+npm install
+```
+
+# Local Development
+```bash
+h5: npm run serve
+mp-weixin: npm run dev:mp-weixin
+```
+
+# Production Build
+```bash
+h5: npm run build
+mp-weixin: build:mp-weixin
+```
+
+# Functionality
+- Product Display: Shangpinge provides various product categories, including bestsellers, new arrivals, special sales, etc. Users can quickly browse product information, such as prices, inventory, specifications, etc.
+- Shopping Cart Management: Users can add interested products to their shopping cart, conveniently view and manage the products in the shopping cart, and perform various shopping cart operations, such as adding, reducing, deleting products, etc.
+- Order Processing: Users can place orders to buy products in the Shangpinge mini-program, supporting various payment methods, such as WeChat Pay, Alipay, etc. Users can check their order status and order details at any time.
+- Personal Center: Shangpinge provides a personal center function where users can view their order records, address management, and other information.
+
+# Tech Stack
+Front-end: Uniapp framework, using Vue.js syntax, supporting multi-platform and multi-terminal development, realizing various application scenarios such as mini-programs, H5, APP, etc.
+
+# Project Features
+- Multi-platform Adaptation: Shangpinge is developed based on the uniapp framework, supporting various application scenarios, and can easily adapt to different platforms and devices.
+- Simple and Clear User Interface: The user interface is simple, beautiful, and the operation is simple and clear, improving the user's shopping experience.
+
+# Future Development
+Optimize User Experience: Further improve the user interface and functions of Shangpinge, and enhance the user's shopping experience.
+Expand Product Categories: Add more product categories and types to meet the diverse shopping needs of users.
+
+# 介绍
+
+- [English](#introduction)
+- [中文](#介绍)
+
+# 中文
+
 # 尚品阁
 尚品阁是一款基于 uniapp 框架开发的购物小程序，主要面向微信用户，旨在提供一个简洁、方便、快捷的购物体验。该小程序集成了商品展示、购物车管理、订单处理、支付等功能，支持用户在线购物、下单、支付等操作。
 
