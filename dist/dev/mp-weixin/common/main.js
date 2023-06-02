@@ -81,10 +81,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var uni_pages__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(uni_pages__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var vue__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! vue */ "./node_modules/@dcloudio/vue-cli-plugin-uni/packages/mp-vue/dist/mp.runtime.esm.js");
 /* harmony import */ var _App__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./App */ "./src/App.vue");
-/* harmony import */ var _uni_promisify_adaptor__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./uni.promisify.adaptor */ "./src/uni.promisify.adaptor.js");
-/* harmony import */ var _uni_promisify_adaptor__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_uni_promisify_adaptor__WEBPACK_IMPORTED_MODULE_4__);
-/* harmony import */ var _store_index__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./store/index */ "./src/store/index.js");
-/* harmony import */ var _escook_request_miniprogram__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @escook/request-miniprogram */ "./node_modules/@escook/request-miniprogram/miniprogram_dist/index.js");
+/* harmony import */ var _store_index__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./store/index */ "./src/store/index.js");
+/* harmony import */ var _escook_request_miniprogram__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @escook/request-miniprogram */ "./node_modules/@escook/request-miniprogram/miniprogram_dist/index.js");
 /* provided dependency */ var wx = __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/wx.js */ "./node_modules/@dcloudio/uni-mp-weixin/dist/wx.js")["default"];
 /* provided dependency */ var uni = __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ "./node_modules/@dcloudio/uni-mp-weixin/dist/index.js")["default"];
 /* provided dependency */ var createApp = __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ "./node_modules/@dcloudio/uni-mp-weixin/dist/index.js")["createApp"];
@@ -98,16 +96,15 @@ wx.__webpack_require_UNI_MP_PLUGIN__ = __webpack_require__;
 
 
 
-
 // 导入网络请求的包
 
-uni.$http = _escook_request_miniprogram__WEBPACK_IMPORTED_MODULE_6__.$http;
+uni.$http = _escook_request_miniprogram__WEBPACK_IMPORTED_MODULE_5__.$http;
 
 // 请求的根路径
-_escook_request_miniprogram__WEBPACK_IMPORTED_MODULE_6__.$http.baseUrl = 'https://api-hmugo-web.itheima.net';
+_escook_request_miniprogram__WEBPACK_IMPORTED_MODULE_5__.$http.baseUrl = 'https://api-hmugo-web.itheima.net';
 
 // 请求拦截器
-_escook_request_miniprogram__WEBPACK_IMPORTED_MODULE_6__.$http.beforeRequest = function (options) {
+_escook_request_miniprogram__WEBPACK_IMPORTED_MODULE_5__.$http.beforeRequest = function (options) {
   uni.showLoading({
     title: '数据加载中...'
   });
@@ -116,13 +113,13 @@ _escook_request_miniprogram__WEBPACK_IMPORTED_MODULE_6__.$http.beforeRequest = f
   if (options.url.indexOf('/my/') !== -1) {
     // 为请求头添加身份认证字段
     options.header = {
-      Authorization: _store_index__WEBPACK_IMPORTED_MODULE_5__["default"].state.m_user.token
+      Authorization: _store_index__WEBPACK_IMPORTED_MODULE_4__["default"].state.m_user.token
     };
   }
 };
 
 // 响应拦截器
-_escook_request_miniprogram__WEBPACK_IMPORTED_MODULE_6__.$http.afterRequest = function () {
+_escook_request_miniprogram__WEBPACK_IMPORTED_MODULE_5__.$http.afterRequest = function () {
   uni.hideLoading();
 };
 
@@ -139,7 +136,7 @@ uni.$showMsg = function () {
 vue__WEBPACK_IMPORTED_MODULE_2__["default"].config.productionTip = false;
 _App__WEBPACK_IMPORTED_MODULE_3__["default"].mpType = 'app';
 var app = new vue__WEBPACK_IMPORTED_MODULE_2__["default"](_objectSpread(_objectSpread({}, _App__WEBPACK_IMPORTED_MODULE_3__["default"]), {}, {
-  store: _store_index__WEBPACK_IMPORTED_MODULE_5__["default"]
+  store: _store_index__WEBPACK_IMPORTED_MODULE_4__["default"]
 }));
 createApp(app).$mount();
 

@@ -1,6 +1,5 @@
 import Vue from 'vue'
 import App from './App'
-import './uni.promisify.adaptor'
 import store from './store/index'
 
 // 导入网络请求的包
