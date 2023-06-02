@@ -1,4 +1,4 @@
-# uni-shop
+# Shangpin Pavilion
 
 ## Project setup
 ```
