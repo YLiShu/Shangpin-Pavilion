@@ -1,19 +1,39 @@
-# Shangpin Pavilion
+# 尚品阁
+尚品阁是一款基于 uniapp 框架开发的购物小程序，主要面向微信用户，旨在提供一个简洁、方便、快捷的购物体验。该小程序集成了商品展示、购物车管理、订单处理、支付等功能，支持用户在线购物、下单、支付等操作。
 
-## Project setup
-```
+# 安装运行
+项目依赖于 npm 包管理工具，确保您的环境中已经安装了 npm。
+
+# 安装依赖
+```bash
 npm install
 ```
 
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
-
-### Compiles and minifies for production
-```
-npm run build
+# 本地开发
+```bash
+h5: npm run serve
+mp-weixin: npm run dev:mp-weixin
 ```
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+# 生产构建
+```bash
+h5: npm run build
+mp-weixin: build:mp-weixin
+```
+
+# 功能介绍
+- 商品展示：尚品阁提供了多种商品分类展示，包括热销商品、新品上架、特价促销等，用户可以快速浏览商品信息，了解商品价格、库存、规格等信息。
+- 购物车管理：用户可以将感兴趣的商品加入购物车，方便随时查看和管理购物车中的商品，支持多样化的购物车操作，如增加、减少、删除商品等。
+- 订单处理：用户可以在尚品阁小程序中下单购买商品，支持多种支付方式，如微信支付、支付宝支付等，用户可以随时查看订单状态和订单详情等信息。
+- 个人中心：尚品阁提供了个人中心功能，用户可以在其中查看自己的订单记录、地址管理等信息。
+
+# 技术栈
+前端：uniapp 框架，采用 Vue.js 语法，支持多平台、多端开发，实现了小程序、H5、APP 等多种应用场景。
+
+# 项目特点
+- 多平台适配：尚品阁基于 uniapp 框架开发，支持多种应用场景，可以轻松适配不同的平台和设备。
+- 界面简洁明了：用户界面简洁、美观，操作简单明了，提高了用户的购物体验。
+
+# 未来发展
+优化用户体验：进一步完善尚品阁的用户界面和功能，提高用户的购物体验。
+拓展商品品类：增加更多的商品品类和种类，满足用户多样化的购物需求。
