@@ -12,12 +12,13 @@
     "newFeature": true,
     "bigPackageSizeSupport": true,
     "checkSiteMap": false,
-    "ignoreUploadUnusedFiles": true,
     "babelSetting": {
       "ignore": [],
       "disablePlugins": [],
       "outputPath": ""
-    }
+    },
+    "condition": false,
+    "ignoreUploadUnusedFiles": true
   },
   "compileType": "miniprogram",
   "libVersion": "2.26.2",

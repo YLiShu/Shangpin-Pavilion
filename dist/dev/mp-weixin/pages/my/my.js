@@ -103,29 +103,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   staticRenderFns: function() { return /* binding */ staticRenderFns; }
 /* harmony export */ });
 var components
-try {
-  components = {
-    myLogin: function () {
-      return Promise.all(/*! import() | components/my-login/my-login */[__webpack_require__.e("common/vendor"), __webpack_require__.e("components/my-login/my-login")]).then(__webpack_require__.bind(__webpack_require__, /*! @/components/my-login/my-login.vue */ "./src/components/my-login/my-login.vue"))
-    },
-  }
-} catch (e) {
-  if (
-    e.message.indexOf("Cannot find module") !== -1 &&
-    e.message.indexOf(".vue") !== -1
-  ) {
-    console.error(e.message)
-    console.error("1. 排查组件名称拼写是否正确")
-    console.error(
-      "2. 排查组件是否符合 easycom 规范，文档：https://uniapp.dcloud.net.cn/collocation/pages?id=easycom"
-    )
-    console.error(
-      "3. 若组件不符合 easycom 规范，需手动引入，并在 components 中注册该组件"
-    )
-  } else {
-    throw e
-  }
-}
 var render = function () {
   var _vm = this
   var _h = _vm.$createElement
